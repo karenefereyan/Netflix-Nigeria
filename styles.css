@@ -268,13 +268,13 @@ a.sign-in-btn{
 
 .footer-content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1.75fr;
     grid-gap: .75rem;
 }
 
 .footer-content > ul > li{
     padding: .5rem 0;
-    font-size: .7rem;
+    font-size: .75rem;
 }
 
 .footer-summary{
