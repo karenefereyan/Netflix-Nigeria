@@ -159,17 +159,6 @@ a.sign-in-btn{
     position: relative;
 }
 
-.features > :nth-child(2) ::after
-{
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: .5rem;
-    background:#222;
-    top:100%;
-    left: 0;
-}
-
 .feature-section-item{
     display: flex;
     flex-direction: column;
@@ -193,13 +182,55 @@ a.sign-in-btn{
     line-height: 1.5rem;
 }
 
-
-/* .features > :nth-child(1):after{
-    content:"KAREN EFEREYAN";
-    color: turquoise;
-    background-color: yellow;
+.faq{
+    background-color: var(--color-dark);
     width: 100%;
-} */
+    height: 100%;
+    position: relative;
+    padding: 3rem 1rem;
+}
+.faq-list{
+    margin: 1.5rem auto;
+    max-width: 800px;
+}
+
+.faq-item{
+    background-color: #222;
+}
+.faq-item-intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 1rem .75rem;
+    border-bottom: 2px solid var(--color-dark);
+    margin-bottom: .5rem;
+}
+#faq-item-description-text{
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 1rem;
+    line-height: 1.75rem;
+
+}
+
+.faq-item-intro:nth-child(1){
+    font-size: 1.5rem;
+}
+.faq-item-intro :nth-child(2){
+    font-size: 2rem;
+    color: var(--color-light);
+}
+
+.active, .panel-opener:hover{
+    color: var(--color-red);
+}
+
+.display-none{
+    display: none;
+}
+
+
 
 
 
@@ -210,4 +241,41 @@ a.sign-in-btn{
     .movie-showcase-content-flex-form-inner{
         flex-direction: row;
     }
+    .feature-section-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10rem 5rem;
+    }
+    .feature-section-item-content,
+    .feature-section-item-image{
+        width: 50%;
+    }
+    .feature-section-item-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-right: 5rem;
+    }
+    .feature-section-item-content > h1{
+        text-align: left;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .feature-section-item-content > h1+p{
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        font-weight: 600;
+    }
+    .features > :nth-child(2) .feature-section-item-content{
+        order:2;
+    }
+    .features > :nth-child(4) .feature-section-item-content{
+        order:2;
+    }
+
 }
