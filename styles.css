@@ -289,10 +289,26 @@ a.sign-in-btn{
   
 }
 
+@media only screen and (min-width:768px){
+    .movie-showcase-content{
+        position: relative;
+    }
+    .movie-showcase-content-flex-form-inner {
+        display: flex;
+        flex-direction: row;
+        margin: 2rem .25rem;
+    }
+    input{
+        width: 100%;
+    }
+    .movie-showcase-content-flex-form-inner-flex-form-container{
+        margin: 0;
+    }
+}
 
 
 
-@media only screen and (min-width:800px){
+/* @media only screen and (min-width:800px){
     .movie-showcase-content-flex-form-inner{
         flex-direction: row;
     }
@@ -333,4 +349,4 @@ a.sign-in-btn{
         order:2;
     }
 
-}
+} */
