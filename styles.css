@@ -142,17 +142,40 @@ a.sign-in-btn{
     margin-left: .5rem;
 }
 
+.movie-showcase > :after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: .5rem;
+    background:#222;
+    top:100%;
+    left: 0;
+}
+
 .features{
     background: var(--color-dark);
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.features > ::after
+{
+    content: " ";
+    position: relative;
+    width: 100%;
+    margin: 0;
+    height: .5rem;
+    background:#222;
+    top:100%;
+    left: 0;
 }
 
 .feature-section-item{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 1.5rem 1rem;
+    padding: .5rem 1rem;
     height: 100vh;
 }
 
