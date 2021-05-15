@@ -1,25 +1,19 @@
-// const acc = document.getElementsByClassName("faq-item");
-// // console.log(acc);
-// var i;
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-// for (i=0; i<acc.length; i++){
-//     acc[i].addEventListener("click", function(){
-//         this.classList.toggle("active")
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
 
-//     })
-    
-// }
-const accordionButton = document.getElementById('panel-opener');
-accordionButton.addEventListener("click", function(){
-    this.classList.toggle('active');
-    console.log("Toggled!")
-
-    var panel = document.getElementById("faq-item-description-text");
-    //console.log("The next element sibling of myself is:", panel);
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    console.log("Next Element Sibling is", panel)
     if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-
-})
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}

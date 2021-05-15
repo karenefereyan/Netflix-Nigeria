@@ -187,50 +187,50 @@ a.sign-in-btn{
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 3rem 1rem;
+    padding:1rem 0;
 }
-.faq-list{
-    margin: 1.5rem auto;
-    max-width: 800px;
+
+.faq h1{
+    color: var(--color-light);
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .faq-item{
+    width: 100%;
     background-color: #222;
+    margin: .25rem auto;
 }
-.faq-item-intro{
+.accordion{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #222;
-    padding: 1rem .75rem;
-    border-bottom: 2px solid var(--color-dark);
-    margin-bottom: .5rem;
-}
-#faq-item-description-text{
-    text-align: left;
-    font-size: 1.2rem;
+    align-content: center;
     padding: 1rem;
-    line-height: 1.75rem;
-
-}
-
-.faq-item-intro:nth-child(1){
-    font-size: 1.5rem;
-}
-.faq-item-intro :nth-child(2){
-    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.25rem;
     color: var(--color-light);
+    margin-bottom: .75rem;
+    border-bottom: 2px solid var(--color-dark);
 }
 
-.active, .panel-opener:hover{
-    color: var(--color-red);
+.active {
+    background-color: var(--color-grey);
+  }
+
+.panel{
+  padding: 1rem;
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: none;
+  color: var(--color-light);
 }
 
-.display-none{
-    display: none;
+.panel p{
+    text-align: left;
 }
-
-
 
 
 
