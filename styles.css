@@ -1,24 +1,41 @@
 :root{
-    --color-white: #fff;
-    --color-red:rgb(255,0,0);
+    --color-light: #f4f4f4;
+    --color-dark:#141414;
+    --color-red:#e50914;
+    --color-grey:#999;
 }
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
 }
+
 html{
     font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
 }
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+
 .movie-showcase{
-    background-image: url('/pictures/showcase-2.jpg');
     width: 100%;
     height: 100vh;
+    background: url('/pictures/showcase-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     position: relative;
 }
+
 .movie-showcase::after{
     content: "";
     position: absolute;
@@ -26,12 +43,11 @@ html{
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0,0,0.5);
-    box-shadow: inset 100px 80px 200px #000000, inset -100px 
-    -80px 200px #000000;
-    /* z-index: 1; */
-   
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 80px 60px 200px #000000, inset -80px 
+    -60px 200px #000000;  
 }
+
 .movie-showcase-header{
     display: flex;
     justify-content: space-between;
@@ -41,20 +57,22 @@ html{
     top: 3%;
     padding: 0 5%;
 }
-img.logo{
-   width: 30%;
-    height: 24%;
+
+img.netflix-logo{
+    width: 30%;
+    height: 25%;
 }
-a.sign-in{
-    background-color: red;
+
+a.sign-in-btn{
+    background-color:var(--color-red);
     color: #fff;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 300;
     border-radius: 10px;
-    display: flex;
     align-self: center;
     padding: 5px 10px;
 }
+
 .movie-showcase-content{
     position: absolute;
     top: 25%;
@@ -65,58 +83,63 @@ a.sign-in{
     align-items: center;
     text-align: center;
 }
-.movie-showcase-content h1{
-    color: var(--color-white);
-    font-weight: bold;
+
+.movie-showcase-content-inner{
+    color: var(--color-light);
+    font-weight: 500;
 }
 
-.movie-showcase-content > p{
-    color: var(--color-white);
-    font-weight: 700;  
-    font-size: 1.3rem;
-    margin-top: 1.25rem;
+.movie-showcase-content-inner > p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
-.flex-form{
+
+.movie-showcase-content-flex-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    margin: .75rem 1rem;
+    margin: 2rem 1rem;
+    color: var(--color-light);
+    font-weight: 400;
+}
 
-}
-.flex-form > p{
-    color: var(--color-white);
-    font-weight: 400;  
-    font-size: 1.2rem;
-    margin: 1.5rem 1rem;
+.movie-showcase-content-flex-form > p{
     line-height: 1.5rem;
+    font-size: 1.1rem;
 }
-.flex-form input{
-    width: 100%;
-    padding: 20px;
-}
-.flex-form input::placeholder{
-    text-align: left;
-    color: #999;
-   
-    font-size: 1.15rem;
-}
-.flex-form .inner-flex-form-container{
+
+.movie-showcase-content-flex-form-inner{
     display: flex;
+    flex-direction: column;
+    margin: 2rem .25rem;
+}
+
+.movie-showcase-content-flex-form-inner > input{
+    padding: 1rem;
+}
+
+.movie-showcase-content-flex-form-inner > input::placeholder{
+    text-align: left;
+    color: var(--color-grey);
+    font-size: 1.1rem;
+}
+
+.movie-showcase-content-flex-form-inner-flex-form-container{
     background-color: var(--color-red);
     color: var(--color-white);
-    margin: 1.5rem 1rem;
     padding: 1rem;
+    margin: 2rem auto;
     display: flex;
     justify-content: space-around;
-}
-.inner-flex-form-container > :nth-child(1){
     font-size: 1rem;
-    font-weight: 500;
 }
-.inner-flex-form-container > :nth-child(2){
-    margin-left: .75rem;
-    font-size: 1rem;
-    font-weight: 500;
+
+.movie-showcase-content-flex-form-inner-flex-form-container > :nth-child(2){
+    margin-left: .5rem;
+}
+@media only screen and (min-width:800px){
+    .movie-showcase-content-flex-form-inner{
+        flex-direction: row;
+    }
 }
