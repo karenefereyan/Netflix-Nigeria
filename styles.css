@@ -16,9 +16,12 @@ html{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-a{
+a,
+h1, 
+p{
     color: #fff;
     text-decoration: none;
+    text-align: center;
 }
 
 img{
@@ -138,6 +141,46 @@ a.sign-in-btn{
 .movie-showcase-content-flex-form-inner-flex-form-container > :nth-child(2){
     margin-left: .5rem;
 }
+
+.features{
+    background: var(--color-dark);
+    height: 100vh;
+    width: 100%;
+}
+
+.feature-section-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 1.5rem;
+}
+
+.feature-section-item-content{
+    color: var(--color-light);
+    font-weight: 400;
+}
+
+.feature-section-item-content > h1{
+    font-size: 2rem;
+}
+
+.feature-section-item-content > h1 + p{
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
+}
+/* .features > :nth-child(1):after{
+    content:"KAREN EFEREYAN";
+    color: turquoise;
+    background-color: yellow;
+    width: 100%;
+} */
+
+
+
+
+
+
 @media only screen and (min-width:800px){
     .movie-showcase-content-flex-form-inner{
         flex-direction: row;
