@@ -263,6 +263,7 @@ a.sign-in-btn{
 .footer-title{
     margin: 1.5rem 0;
     font-weight: 700;
+    font-size: 1rem;
 }
 
 .footer-content{
@@ -273,18 +274,18 @@ a.sign-in-btn{
 
 .footer-content > ul > li{
     padding: .5rem 0;
-    font-size: .7rem;
+    font-size: .65rem;
 }
 
 .footer-summary{
     margin: 1.5rem 0;
     font-weight: 700; 
+    font-size:1rem;
 }
 .footer-title, 
 .footer-content a,
 .footer-summary {
     color:#757575 !important;
-    font-size: 1rem;
   
 }
 
