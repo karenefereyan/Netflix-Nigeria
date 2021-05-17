@@ -1,21 +1,23 @@
-var acc = document.getElementsByClassName("accordion");
-const featuredItem = document.getElementsByClassName("feature-section-item");
-let i;
-let j;
+let acc = document.getElementsByClassName("accordion");
+let spanBtns = document.getElementsByClassName("faq-btn"); 
+let i, j, k;
+
+//console.log("The featured items are:", featuredItem);
+//console.log("The span buttons are:", spanBtns);
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
     this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
     var panel = this.nextElementSibling;
-    console.log("Next Element Sibling is", panel)
+   // console.log("The value of spanBtns is", spanBtns);
+    
     if (panel.style.display === "block") {
+      spanBtns[0].innerText = "+";
       panel.style.display = "none";
     } else {
+      spanBtns[0].innerText ="x";
       panel.style.display = "block";
     }
+  
   });
 }
