@@ -1,5 +1,7 @@
 var acc = document.getElementsByClassName("accordion");
-var i;
+const featuredItem = document.getElementsByClassName("feature-section-item");
+let i;
+let j;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
