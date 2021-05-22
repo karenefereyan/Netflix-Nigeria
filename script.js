@@ -1,6 +1,12 @@
 let acc = document.getElementsByClassName("accordion");
 let spanBtns = document.getElementsByClassName("faq-btn"); 
 let i;
+// let stubborn = document.getElementById("stubborn");
+
+// window.onload(()=> {
+//   this.classList.add("stubborn-margin-bottom");
+// })
+
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {

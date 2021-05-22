@@ -1,30 +1,26 @@
 :root{
     --color-light: #f4f4f4;
-    --color-dark:#000000;
-    --color-red:#e50914;
-    --color-grey:#999;
+    --color-dark: #000000;
+    --color-red: #e50914;
+    --color-grey: #999;
+    --color-white:#fff;
+    --color-dark-grey:#303030;
 }
 
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html{
     font-size: 16px;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-a,
-h1, 
-p{
-    color: #fff;
+a{
     text-decoration: none;
     text-align: center;
 }
 
-li {
+ul, li{
     list-style: none;
 }
 
@@ -32,223 +28,219 @@ img{
     width: 100%;
 }
 
-.container{
-    width: 100%;
-    padding: 2.5rem 5rem;
-}
-
-
 .movie-showcase{
-    width: 100%;
-    height: 100vh;
-    background: url('/pictures/showcase.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 100%;
+    background: url(/pictures/showcase-2.jpg);
     position: relative;
 }
 
 .movie-showcase::after{
-    content: "";
+    content:"";
+    box-shadow: inset 50px 125px 250px #000000,
+     inset -50px -250px 125px #000000;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: inset 50px 75px 250px #000000, inset -50px 
-    -75px 250px #000000;  
+    height: 100%;
 }
 
-.movie-showcase-header{
-    display: flex;
+.nav{
+    display:flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
     position: relative;
     z-index: 2;
-    top: 3%;
-    padding: 0 5%;
+    padding: 10px 20px;
+    /* background-color: darkcyan; */
 }
 
-img.netflix-logo{
+.netflix-logo{
     width: 30%;
-    height: 25%;
 }
 
-a.sign-in-btn{
-    background-color:var(--color-red);
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 300;
-    border-radius: 10px;
-    align-self: center;
-    padding: 5px 10px;
+.cta-btn{
+    color: var(--color-light);
+    background-color: var(--color-red);
+    border-radius: 5px;
+    padding: 5px 15px;
 }
 
 .movie-showcase-content{
-    position: absolute;
-    top: 25%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-}
-
-.movie-showcase-content-inner{
-    color: var(--color-light);
+    color: var(--color-white);
+    position: relative;
+    z-index: 2;
+    padding: 50px 20px;
     font-weight: 500;
 }
 
-.movie-showcase-content-inner > p{
-    font-size: 1.2rem;
-    margin-top: 1rem;
+.inner h1{
+    font-size: 1.75em;
 }
 
-.movie-showcase-content-flex-form{
+.inner p,
+.flex-form p
+{
+    font-size: 1.125em;
+    margin-top: .5em;
+}
+
+.flex-form,
+.flex-form-inner{
+    margin-top: 1.5em;
+}
+
+.flex-form-inner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: 2rem 1rem;
-    color: var(--color-light);
-    font-weight: 400;
 }
 
-.movie-showcase-content-flex-form > p{
-    line-height: 1.5rem;
-    font-size: 1.1rem;
+.flex-form-inner > input{
+    padding: 10px 20px;
 }
-
-.movie-showcase-content-flex-form-inner{
-    display: flex;
-    flex-direction: column;
-    margin: 2rem .25rem;
-}
-
-.movie-showcase-content-flex-form-inner > input{
-    padding: 1rem;
-}
-
-.movie-showcase-content-flex-form-inner > input::placeholder{
+.flex-form-inner > input::placeholder{
     text-align: left;
     color: var(--color-grey);
     font-size: 1.1rem;
 }
 
-.movie-showcase-content-flex-form-inner-flex-form-container{
-    background-color: var(--color-red);
+.flex-form-inner > .cta-btn{
+    width: fit-content;
+    margin: 1em auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.features{
+    position: relative;
+}
+
+.features,
+.faq{
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--color-dark);
     color: var(--color-white);
-    padding: 1rem;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1rem;
 }
 
-.movie-showcase-content-flex-form-inner-flex-form-container > :nth-child(2){
-    margin-left: .5rem;
+.faq{
+    padding: 0;
 }
 
-.features > :before{
+.features::before{
     content: " ";
     position: absolute;
     width: 100%;
     height: .5rem;
-    background:#222;
+    background:var(--color-dark-grey);
     bottom:100%;
-    left: 0;
+    left: 0;   
 }
 
-.features{
-    background: var(--color-dark);
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 
-.feature-section-item{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: .5rem auto;
-    height: 100vh;
-}
 
-.feature-section-item::after{
+/* .features > * :not(:nth-child(1))::after{
     content: " ";
-    position: relative;
+    position: absolute;
     width: 100%;
     height: .5rem;
-    background:#222;
-    top: 100%;
-    left:0;
+    background:var(--color-dark-grey);
+    top:100%;
+    left: 0;    
+} */
+
+
+.feature-section{
+    display: flex;
+    flex-direction: column;
+    padding: 5em 1.5em;
+    text-align: center;
+    /* border-bottom: 5px solid #222; */
 }
 
-.feature-section-item-content{
-    color: var(--color-light);
-    font-weight: 400;
-}
-
-.feature-section-item-content > h1{
-    font-size: 2rem;
-}
-
-.feature-section-item-content > h1 + p{
-    font-size: 1.2rem;
-    margin: 1.5rem 0;
-    line-height: 1.5rem;
-}
-
-.faq{
-    background-color: var(--color-dark);
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding:1rem 0;
-}
-
+.feature-section h1,
 .faq h1{
-    color: var(--color-light);
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2em
 }
 
-.faq-item{
-    width: 100%;
-    background-color: #222;
-    margin: .25rem auto;
+.feature-section p{
+    font-size: 1.25em;
+    margin-top: 1.75em;
+    line-height: 1.5em;
 }
-.accordion{
+
+.faq > h1{
+    text-align: center;
+    margin-bottom: 2em;
+    padding-top: 3em;
+}
+.faq .flex-form{
+    padding: 1em 1.5em;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.faq-item .accordion{
+    margin-top: .75em;
+    /* border-bottom: 2px solid var(--color-grey); */
+}
+.faq-item .accordion,
+.faq-item .panel{
+    background-color: var(--color-dark-grey);
+    padding: 1em;
+
+}
+
+.active{
+    background-color: red
+}
+
+
+.faq-item .panel{
+    display: none;
+    text-align: left;
+}
+
+.faq-item .accordion{
     display: flex;
     justify-content: space-between;
-    align-content: center;
-    padding: 1rem;
-    cursor: pointer;
-    outline: none;
-    font-size: 1.25rem;
-    color: var(--color-light);
-    margin-bottom: .75rem;
-    border-bottom: 2px solid var(--color-dark);
+    align-items: center;
 }
 
-.active {
-    background-color: var(--color-grey);
-  }
-
-.panel{
-  padding: 1rem;
-  text-align: left;
-  line-height: 2rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  display: none;
-  color: var(--color-light);
+.faq-item p,
+.faq-item span{
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
-.panel p{
-    text-align: left;
+.footer{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 2.5em 1.75em;
+    position: relative;
+}
+
+.footer-title, 
+.footer-summary{
+    font-size: 1em;
+    color: var(--color-grey);
+    font-weight: bold;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2em 0;
+}
+
+.footer-content ul li{
+    padding: .5em 0;
+}
+.footer-content ul li  a{
+    color: var(--color-grey);
+    font-size: .9em;
 }
 
 .footer::before{
@@ -256,51 +248,83 @@ a.sign-in-btn{
     position: absolute;
     width: 100%;
     height: .5rem;
-    background:#222;
-    bottom:100%;
-    left: 0;
-
+    background:var(--color-dark-grey);
+    bottom: 100%;
+    left: 0;    
 }
 
 
-.footer{
-    background-color: var(--color-dark);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; 
-    align-items:flex-start;
-    padding: 1.5rem 2.5rem;
-    position: relative;
-}
 
-.footer-title{
-    margin: 1.5rem 0;
-    font-weight: 700;
-    font-size: 1rem;
-}
+@media only screen and (min-width:678px){
+    .netflix-logo{
+        width: 10%;
+    }
+    .inner h1{
+        font-size: 3em;
+    }
+    .inner p,
+    .flex-form p{
+        font-size: 1.5em;
+        margin-top: .25em;
+    }
+    .flex-form-inner{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 1.5em 20em 2.5em 20em;
+    }
+    .flex-form-inner > input,
+    .flex-form-inner > .cta-btn{
+        width: 100%;
+    }
+    .flex-form-inner > .cta-btn{
+        border-radius: 0;
+        margin: 0;
+        height: 42px;
+    }
+    .movie-showcase{
+        padding-bottom: 15rem;
+    }
+   .feature-section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+        padding: 8em 5em;
+   }
 
-.footer-content{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+   .feature-section-content > h1{
+         font-size: 2.75em;
+    }
+
+    .feature-section-content > p{
+        font-size: 1.75em;
+        margin-top: 1em;
+    }
+    .features > *:nth-child(2),
+    .features > *:nth-child(4){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        direction: rtl;
+    }
+    .features > *:nth-child(2) > .feature-section-content,
+    .features > *:nth-child(4) > .feature-section-content{
+        text-align:left;
+        direction: ltr;
+    }
+    .faq{
+        padding: 8em 20em;
+    }
+
+    .footer{
+        padding: 5em 10em;
+    }
+
+    .footer-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+    }
     
-}
-
-.footer-content > ul > li{
-    padding: .5rem 0;
-    font-size: .8rem;
-}
-
-.footer-summary{
-    margin: 1.5rem 0;
-    font-weight: 700; 
-    font-size:1rem;
-}
-.footer-title, 
-.footer-content a,
-.footer-summary {
-    color:#757575 !important;
-  
 }
