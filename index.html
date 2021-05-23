@@ -4,70 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Nigeria Landing Page</title>
-    <link rel="stylesheet" href="/styles.css">
+    <meta content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies Nigeria, watch TV online, no download, full length movies" name="keywords">
+    <title>Netflix Nigeria - Watch Movies, TV shows for one low price</title>
+    <link rel="shortcut icon" type="image/png" href="pictures/netflix-favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
 
-    <!--Header Section-->
+    <!--HEADER SECTION-->
     <header class="movie-showcase">
-        <div class="nav">
-            <img class="netflix-logo" src="/pictures/netflix-logo-2.png"
+        <!--    NAVIGATION-->
+        <nav class="nav">
+            <img class="netflix-logo" src="pictures/netflix-logo.png"
             alt="Netflix Logo">
-            <a class="cta-btn" href="#">Sign In</a>
-        </div>
+            <a class="cta-btn" href="index.html">Sign In</a>
+        </nav>
+
         <div class="movie-showcase-content">
             <div class="inner">
                 <h1>Unlimited movies, TV <br> shows, and more.</h1>
                 <p>Watch anywhere. Cancel anytime.</p>
             </div>
+
+
             <form class="flex-form">
                 <p>Ready to watch? Enter your email address to create or restart your membership.</p>
+
                 <div class="flex-form-inner">
                     <input type="text" placeholder="Email address">
-                    <div class="cta-btn">
-                        <span>Get Started</span>
-                        <span>&nbsp;&nbsp;></span>
-                    </div>
-                </div>
-               
+                    <button type="button" class="cta-btn">
+                        <span>Get Started &nbsp; &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </button>
+                </div> 
             </form>
         </div>
     </header>
 
-    <!--Features Section-->
-    <section class="features">
-        <!--Featured Item 1-->
-        <div class="feature-section">
-            <div class="feature-section-content" id="stubborn">
+
+
+    <!--FEATURES SECTION-->
+    <main class="features">
+
+        <!--FEATURED ITEM 1-->
+        <div class="feature-section" id="f1">
+            <div class="feature-section-content">
                 <h1>Enjoy on your TV.</h1>
                 <p>Watch on Smart TVs, Playstation, Xbox, 
                     Chromecast, Apple, TV, Blu-Ray players, and more.
                 </p>
             </div>
             <div class="feature-section-image">
-                <img src="/pictures/feature-1.png" alt="" >
+                <img src="pictures/feature-1.png" alt="Tv with remote"  aria-label="tv-with-remote">
             </div>
         </div>
 
-
-         <!--Featured Item 2-->
-         <div class="feature-section">
+         <!--FEATURED ITEM 2-->
+        <div class="feature-section" id="f2">
             <div class="feature-section-content">
                 <h1>Download your shows to <br>watch offline.</h1>
                 <p>Save your favorites easily and always have something 
                     to watch.
                 </p>
             </div>
+
             <div class="feature-section-image">
-                <img src="/pictures/feature-2.jpg" alt="" >
+                <img src="pictures/feature-2.jpg" alt="Mobile phone to watch movies" aria-label="mobile phone to watch movies" >
             </div>
         </div>
 
-
-
-         <!--Featured Item 3-->
-         <div class="feature-section">
+         <!--FEATURED ITEM 3-->
+        <div class="feature-section" id="f3">
             <div class="feature-section-content">
                 <h1>Watch everywhere.</h1>
                 <p>Stream unlimited movies and TV shows on your phone, 
@@ -75,37 +82,37 @@
                 </p>
             </div>
             <div class="feature-section-image">
-                <img src="/pictures/feature-3.png" alt="" >
+                <img src="pictures/feature-3.png" alt="imac to watch netflix" aria-label="imac to watch netflix">
             </div>
         </div>
 
-
-          <!--Featured Item 4-->
-          <div class="feature-section">
+          <!--FEATURED ITEM 4-->
+        <div class="feature-section" id="f4">
             <div class="feature-section-content">
                 <h1>Create profile for kids.</h1>
-                <p>Send kids on an adventure with their favorite characters
-                    in a space made just for them-free with your membership.
+                <p>Send kids on adventure with their favorite characters
+                    in a space made just for them -- free with your membership.
                 </p>
             </div>
             <div class="feature-section-image">
-                <img src="/pictures/feature-4.png" alt="" >
+                <img src="pictures/feature-4.png" alt="kids cartoon poster"  aria-label="kids cartoon poster">
             </div>
         </div>
-    </section>
+    </main>
 
 
-    <!--Frequently asked questions section-->
+
+    <!--FAQ SECTION-->
     <section class="faq">
+
         <h1>Frequently Asked Questions</h1>
 
         <ul>
-
              <!-- FAQ 1 -->
             <li class="faq-item">
                 <div class="accordion">
                     <p>What is Netflix?</p>
-                    <span class="faq-btn">+</span>
+                    <span class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i></span>
                 </div>
         
                  <div class="panel">
@@ -120,16 +127,17 @@
                          added every week!</p>
                  </div>
             </li>
+
               <!-- FAQ 2 -->
             <li class="faq-item">
-
                 <div class="accordion">
                     <p>How much does Netflix cost?</p>
-                    <span class="faq-btn">+</span>
+                    <span class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i></span>
                 </div>
         
                  <div class="panel">
-                     <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₦2,900 to ₦4,400 a month. No extra costs, no contracts.</p>
+                     <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee.
+                          Plans range from ₦2,900 to ₦4,400 a month. No extra costs, no contracts.</p>
                  </div>
             </li>
 
@@ -137,7 +145,7 @@
             <li class="faq-item"> 
                 <div class="accordion">
                     <p>Where can I watch?</p>
-                    <span class="faq-btn">+</span>
+                    <span class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i></span>
                 </div>
         
                  <div class="panel">
@@ -157,7 +165,7 @@
             <li class="faq-item">
                 <div class="accordion">
                     <p>How do I cancel?</p>
-                    <span class="faq-btn">+</span>
+                    <span class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i></span>
                 </div>
         
                  <div class="panel">
@@ -174,7 +182,7 @@
             <li class="faq-item">
                 <div class="accordion">
                     <p>What can I watch on Netflix?</p>
-                    <span class="faq-btn">+</span>
+                    <span class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i></span>
                 </div>
         
                  <div class="panel">
@@ -189,7 +197,7 @@
             <li class="faq-item">
                 <div class="accordion">
                     <p>Is Netflix good for kids?</p>
-                    <span class="faq-btn">+</span>
+                    <span class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i></span>
                 </div>
         
                  <div class="panel">
@@ -209,23 +217,20 @@
 
         <form class="flex-form">
             <p>Ready to watch? Enter your email address to create or restart your membership.</p>
+
             <div class="flex-form-inner">
                 <input type="text" placeholder="Email address">
-                <div class="cta-btn">
-                    <span>Get Started</span>
-                    <span>&nbsp;&nbsp;></span>
-                </div>
-            </div>
-           
+                <button type="button" class="cta-btn">
+                    <span>Get Started &nbsp; &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </button>
+            </div> 
         </form>
     </section>
 
 
-    <!--Footer section-->
+    <!--FOOTER SECTION-->
     <footer class="footer">
-        <p class="footer-title">
-            Questions? Contact us.
-        </p>
+        <p class="footer-title">Questions? Contact us.</p>
 
         <div class="footer-content">
             <ul>
@@ -256,11 +261,12 @@
             </ul>
         </div>
 
-        <p class="footer-summary">Netflix Nigeria</p>
-      
+        <p class="footer-summary">Netflix Nigeria</p> 
 
     </footer>
 
-    <script src="/script.js"></script>
+
+    <!-- JS SCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>
