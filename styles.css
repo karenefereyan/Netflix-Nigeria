@@ -17,23 +17,12 @@ body{
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     text-align: center;
-    overflow-x: hidden;
 }
 
 button{
     outline: none;
     border: none;
 }
-
-header, 
-main,
-section, 
-footer{
-    /* padding: 2.5em 5em; */
-    height: 100%;
-    width: 100%;
-}
-
 
 ul, li{
     list-style: none;
@@ -61,22 +50,9 @@ img{
     max-width: 100%;
 }
 
-
-/* .features::before{
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: .5rem;
-    background:var(--color-dark-grey);
-    bottom:100%;
-    left: 0;   
-} */
-
-
-
-.active{
+/* .active{
     background-color: var(--color-grey);
-}
+} */
 
 .movie-showcase{
     background: url('pictures/showcase-2.jpg');
@@ -84,7 +60,9 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    border-bottom: 5px solid var(--color-dark-grey);
+    border-bottom: 10px solid var(--color-dark-grey);
+    width: 100%;
+    height:100%;
 }
 
 .movie-showcase::before{
@@ -157,9 +135,18 @@ button[type="button"] span{
     font-size: 1.25em;
 }
 
+.features{
+    width: 100%;
+    height: 100%;
+}
+
+.faq{
+    border-top: 10px solid var(--color-dark-grey);
+}
+
 .faq .flex-form,
 .faq h1{
-    padding: 30px 15px;
+    padding: 50px 25px;
 }
 
 .features,
@@ -181,6 +168,7 @@ button[type="button"] span{
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
+    border-bottom: 2px solid var(--color-dark);
     
 }
 
@@ -202,6 +190,7 @@ button[type="button"] span{
     color: var(--color-grey);
     font-weight: 500;
     text-align: left;
+    padding: 50px 25px;
 }
 
 .footer-content > ul > li >a {
