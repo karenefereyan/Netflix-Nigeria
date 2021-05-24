@@ -140,6 +140,10 @@ button[type="button"] span{
     height: 100%;
 }
 
+.feature-section:not(:last-child){
+    border-bottom: 10px solid var(--color-dark-grey);
+}
+
 .faq{
     border-top: 10px solid var(--color-dark-grey);
 }
@@ -160,7 +164,7 @@ button[type="button"] span{
 }
 
 .faq-item{
-    margin-bottom: .2em;
+    margin-bottom: .5em;
 }
 
 .accordion{
@@ -168,6 +172,7 @@ button[type="button"] span{
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
+    height: 75px;
     border-bottom: 2px solid var(--color-dark);
     
 }
@@ -222,10 +227,10 @@ button[type="button"] span{
         width: 10%;
     }
     body p{
-        font-size: 1.75em;
+        font-size: 1.15em;
     }
     body h1{
-        font-size: 3.25em;
+        font-size: 3em;
     }
     .nav{
          padding: 25px 50px;
@@ -265,15 +270,16 @@ button[type="button"] span{
         direction: ltr;
     }
 
+    .faq ul{
+        margin: 0 auto;
+        width: 60%;
+    }
     .footer-content{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
     .footer{
-        padding: 0 7.5em;
-    }
-    body p{
-        font-size: 1.25em;
+        padding: 50px 100px;
     }
 }
 
@@ -281,6 +287,13 @@ button[type="button"] span{
 
 @media screen and (min-width:1080px){
     .flex-form{
-        padding: 0 15em;
+        margin: 0 auto;
+        width: 50%;
+     }
+     .flex-form input[type="text"]{
+         width: 70%;
+     }
+     .flex-form button[type="button"]{
+         width: 30%;
      }
 }
